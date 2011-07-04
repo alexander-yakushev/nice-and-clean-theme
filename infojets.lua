@@ -10,6 +10,13 @@ local motive = theme.motive or "#CC0000"
 
 infojets = {}
 
+local function repeat_every(func, seconds)
+   func()
+   local t = timer({ timeout = seconds })
+   t:add_signal("timeout", func)
+   t:start()
+end
+
 local function create_wbox(wname, wx, wy, wwidth, wheight)
    local wbox = wibox({ name = wname, bg = '#00FF0000', 
                         height = wheight , width = wwidth })
