@@ -3,24 +3,28 @@
 
 theme = {}
 theme.theme_dir = awful.util.getdir("config") .. "/themes/nice-and-clean-theme"
-theme.wallpaper_cmd = { "awsetbg " .. theme.theme_dir .. "/background.jpg" }
+theme.wallpaper_cmd = { "awsetbg " .. theme.theme_dir .. "/background-large.jpg" }
 
-theme.font          = "sans 9"
+theme.font          = "sans 8"
 
 theme.bg_normal     = "#222222"
-theme.bg_focus      = "#d8d8d8"
-theme.bg_urgent     = "#d02e54"
+theme.bg_focus      = "#444444"
+theme.bg_urgent     = "#7f7f7f"
 theme.bg_minimize   = "#444444"
 
 theme.fg_normal     = "#cccccc"
-theme.fg_focus      = "#000000"
+theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.border_width  = "1"
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
+theme.border_normal = "#222222"
+theme.border_focus  = "#000000"
 theme.border_marked = "#91231c"
+
+theme.motive = "#7f7f7f"
+
+require("themes/nice-and-clean-theme/infojets")
 
 -- There are other variable sets
 -- overriding the default one when

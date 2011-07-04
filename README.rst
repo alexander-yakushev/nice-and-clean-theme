@@ -6,23 +6,20 @@ rc.lua file::
 
     beautiful.init("path/to/themes/nice-and-clean-theme/theme.lua")
 
-There is an optional conky component of this theme as well - the date/time and 
-system info displays. Install conky from your distro's repositories, and then
-start up conky with the configuration files from the included conky 
-subdirectory::
+Widgets are done with native awesome wiboxes. They may not work with
+your awesome version (my version is 3.4.5). Weather widget is done
+using conkyForecast script (not included in this package).
 
-    cd conky
-    conky -c conkydate &
-    conky -c conkyhr &
-    conky -c conkymin &
-    conky -c conkystats &
+Note: RAM usage and CPU usage widgets are not updated automatically
+because I update them from my statusbar Vicious widgets (to consume
+less resources). To make them independent you should rewrite their
+body so they parse files /proc/cpuinfo, /proc/meminfo and temperature
+themselves.
 
-Make sure you change your location code in the conkystats config 
-to get accurate weather reports. The location code uses Accuweather's
-system. For people in the US it is your zipcode.
+Calendar and todo is done using
+https://awesome.naquadah.org/wiki/Orglendar_widget . You can scroll
+the calendar to switch months.
 
 About
 =====
-This awesome window manager theme is based off of ghost1227's Openbox theme.
-All credit for the conky theme goes to ghost1227
-http://workshop.ghost1227.com/2009/06/two-new-openbox-themes/
+Inspired by https://awesome.naquadah.org/wiki/Nice_and_Clean_Theme .
